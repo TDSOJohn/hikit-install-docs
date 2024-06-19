@@ -33,6 +33,10 @@ These are not required for a basic installation but provide additional features 
 
 ### Run local instance
 
+First of all clone and build [Hikit-Common](https://github.com/SeC-Hikit/Hikit-Common).
+
+Then, after cloning this repo, simply run `mvn install -f root/pom.xml -P microservice-binding`.
+
 Some changes are needed in order to test everything locally. Namely, `application.properties` contains paths that need to point to a local folder for temporary storage and logging.
 
 Change these values:
