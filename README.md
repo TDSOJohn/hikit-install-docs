@@ -25,17 +25,21 @@ These are not required for a basic installation but provide additional features 
 - Hikit
     - Java 11 SDK
     - Maven 3
-    - [MongoDB](https://www.mongodb.com/)
+    - [MongoDB](https://www.mongodb.com/) <= 4.4
     - [MongoDB database tools](https://www.mongodb.com/docs/database-tools/installation/installation/)
 
 - Hikit frontend
     - Nodejs 16 (currently tested with 16.14.2)
 
-### Run local instance
+### Run local dev / test instance
 
-First of all clone and build [Hikit-Common](https://github.com/SeC-Hikit/Hikit-Common).
+First of all clone [Hikit-Common](https://github.com/SeC-Hikit/Hikit-Common) and build it by running
 
-Then, after cloning this repo, simply run `mvn install -f root/pom.xml -P microservice-binding`.
+`mvn install -f common/pom.xml`.
+
+Then, clone the [Hikit](https://github.com/SeC-Hikit/Hikit) serverside repo. After cloning this repo, simply run
+
+`mvn install -f root/pom.xml -P microservice-binding`.
 
 Some changes are needed in order to test everything locally. Namely, `application.properties` contains paths that need to point to a local folder for temporary storage and logging.
 
